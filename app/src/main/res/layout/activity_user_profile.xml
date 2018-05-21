@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="bradleybarber.runnersedgemvp.UserProfileActivity"
+    android:id="@+id/userProfile"
+    android:background="@drawable/profilebg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rings"
+        android:src="@drawable/rings3"
+        android:contentDescription="@string/rings"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/weightPromptTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weightPromptTextView"
+        android:textColor="@color/runnersedge_green"
+        android:textSize="@dimen/standardTextSize"
+        android:gravity="center"
+        android:layout_above="@+id/weightPromptEditText"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:id="@+id/namePromptEditText"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:id="@+id/weightPromptEditText"
+        android:layout_alignTop="@+id/kgTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:labelFor="@id/weightPromptEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/kg"
+        android:id="@+id/kgTextView"
+        android:layout_above="@+id/okButton"
+        android:layout_toEndOf="@+id/weightPromptEditText"
+        android:layout_marginBottom="146dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:textSize="@dimen/standardTextSize"
+        android:id="@+id/okButton"
+        android:textColor="@color/runnersedge_green"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="bluetoothSetup"/>
+
+    <TextView
+        android:labelFor="@id/namePromptEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/namePromptTextView"
+        android:textSize="@dimen/standardTextSize"
+        android:textColor="@color/runnersedge_green"
+        android:id="@+id/textView"
+        android:layout_marginTop="71dp"
+        android:layout_below="@+id/userInfoPromptTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profileInfoPromptTextView"
+        android:textSize="@dimen/standardTextSize"
+        android:id="@+id/userInfoPromptTextView"
+        android:layout_alignTop="@+id/rings"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="bradleybarber.runnersedgemvp.RunActivity"
+    android:background="@drawable/runbg"
+    android:id="@+id/runMain">
+
+    <TextView
+        android:id="@+id/forceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forceTextView"
+        android:textSize="@dimen/titleTextSize"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/runInstructTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/runInstructTextView"
+        android:textSize="@dimen/standardTextSize"
+        android:textColor="@color/material_blue_grey_800"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/forceTextView"
+        android:paddingBottom="@dimen/activity_vertical_margin"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rundatabg"
+        android:layout_below="@+id/runInstructTextView"
+        android:layout_above="@+id/endRunButton"
+        android:layout_alignStart="@+id/forceTextView"
+        android:layout_alignEnd="@+id/forceTextView">
+
+        <ListView
+            android:id="@+id/runReadout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbarStyle="insideInset"
+            android:textAlignment="center">
+        </ListView>
+
+    </RelativeLayout>
+
+    <Button
+        android:background="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/endRunButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/stopRunButtonTextView"
+        android:textColor="@color/white"
+        android:textSize="@dimen/standardTextSize"/>
+
+</RelativeLayout>

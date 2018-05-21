@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="bradleybarber.runnersedgemvp.RunResultsActivity"
+    android:background="@drawable/background3">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/greatestImpactTextView"
+        android:id="@+id/greatestImpactForceTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/averageImpactForceTextView"
+        android:id="@+id/averageImpactForceTextView"
+        android:layout_below="@+id/greatestImpactForceTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/graphButtonTextView"
+        android:textColor="@color/blue"
+        android:id="@+id/graphButton"
+        android:layout_below="@+id/averageImpactForceTextView"
+        android:layout_toRightOf="@+id/cadenceTextView"
+        android:layout_toEndOf="@+id/cadenceTextView"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/cadenceTextView"
+        android:id="@+id/cadenceTextView"
+        android:layout_below="@+id/graphButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="136dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/runnersedge_green"
+        android:id="@+id/calcGreatestImpact"
+        android:layout_alignTop="@+id/greatestImpactForceTextView"
+        android:layout_alignLeft="@+id/calcAvgImpact"
+        android:layout_alignStart="@+id/calcAvgImpact"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/runnersedge_green"
+        android:id="@+id/calcAvgImpact"
+        android:maxLength="5"
+        android:layout_alignTop="@+id/averageImpactForceTextView"
+        android:layout_toRightOf="@+id/graphButton"
+        android:layout_toEndOf="@+id/graphButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/runnersedge_green"
+        android:id="@+id/calcCadence"
+        android:maxLength="5"
+        android:layout_alignTop="@+id/cadenceTextView"
+        android:layout_alignStart="@+id/calcAvgImpact"
+        android:layout_alignLeft="@+id/calcAvgImpact"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
